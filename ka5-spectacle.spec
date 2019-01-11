@@ -1,16 +1,16 @@
-%define		kdeappsver	18.12.0
+%define		kdeappsver	18.12.1
 %define		qtver		5.9.0
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	18.12.0
+Version:	18.12.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3aaf01af687554eb0ec966487d012ce2
+# Source0-md5:	733a4ef4ed4d355e5cb7a65c3af61f48
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
