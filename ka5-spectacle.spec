@@ -1,16 +1,16 @@
-%define		kdeappsver	18.12.1
+%define		kdeappsver	19.04.1
 %define		qtver		5.9.0
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	18.12.1
+Version:	19.04.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	733a4ef4ed4d355e5cb7a65c3af61f48
+# Source0-md5:	cea2e152c98d790035b0be06bc07b7a6
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
@@ -36,6 +36,7 @@ BuildRequires:	kf5-knotifications-devel >= 5.29.0
 BuildRequires:	kf5-kwidgetsaddons-devel >= 5.29.0
 BuildRequires:	kf5-kwindowsystem-devel >= 5.29.0
 BuildRequires:	kf5-kxmlgui-devel >= 5.29.0
+BuildRequires:	ninja
 BuildRequires:	qt5-build >= 5.6.0
 BuildRequires:	shared-mime-info
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -56,15 +57,15 @@ mogą być następnie zapisane w wielu formatach.
 %build
 install -d build
 cd build
-%cmake \
+%cmake -G Ninja \
+	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	..
-%{__make}
+%ninja_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} -C build install \
-	DESTDIR=$RPM_BUILD_ROOT
+%ninja_install -C build
 
 %find_lang %{kaname} --all-name --with-kde
 
