@@ -1,16 +1,16 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		qtver		5.9.0
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	cea2e152c98d790035b0be06bc07b7a6
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	bc49f15d69477c12dd874f1a56ce4d13
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
@@ -74,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/spectacle.categories
 %attr(755,root,root) %{_bindir}/spectacle
 %{_desktopdir}/org.kde.spectacle.desktop
 %{_datadir}/dbus-1/interfaces/org.kde.Spectacle.xml
@@ -84,6 +83,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/32x32/apps/spectacle.png
 %{_iconsdir}/hicolor/48x48/apps/spectacle.png
 %{_iconsdir}/hicolor/scalable/apps/spectacle.svgz
-%{_datadir}/khotkeys/spectacle.khotkeys
 %{_datadir}/knotifications5/spectacle.notifyrc
 %{_datadir}/metainfo/org.kde.spectacle.appdata.xml
+%attr(755,root,root) %{_libdir}/kconf_update_bin/spectacle-migrate-shortcuts
+%{_datadir}/kconf_update/spectacle_shortcuts.upd
+%dir %{_datadir}/kglobalaccel
+%{_datadir}/kglobalaccel/org.kde.spectacle.desktop
+%{_datadir}/qlogging-categories5/spectacle.categories
+%{_datadir}/kconf_update/spectacle_newConfig.upd
+%{systemduserunitdir}/app-org.kde.spectacle.service
