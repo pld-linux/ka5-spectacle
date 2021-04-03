@@ -6,7 +6,7 @@ Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
 Version:	20.12.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -33,6 +33,7 @@ BuildRequires:	kf5-ki18n-devel >= 5.29.0
 BuildRequires:	kf5-kio-devel >= 5.29.0
 BuildRequires:	kf5-knewstuff-devel >= 5.29.0
 BuildRequires:	kf5-knotifications-devel >= 5.29.0
+BuildRequires:	kf5-kwayland-devel
 BuildRequires:	kf5-kwidgetsaddons-devel >= 5.29.0
 BuildRequires:	kf5-kwindowsystem-devel >= 5.29.0
 BuildRequires:	kf5-kxmlgui-devel >= 5.29.0
