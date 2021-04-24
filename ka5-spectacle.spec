@@ -1,16 +1,16 @@
-%define		kdeappsver	20.12.3
+%define		kdeappsver	21.04.0
 %define		qtver		5.9.0
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	20.12.3
-Release:	2
+Version:	21.04.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	bc49f15d69477c12dd874f1a56ce4d13
+# Source0-md5:	d5895f4a2def9205b6a1602b686763f3
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
@@ -93,3 +93,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories5/spectacle.categories
 %{_datadir}/kconf_update/spectacle_newConfig.upd
 %{systemduserunitdir}/app-org.kde.spectacle.service
+%{_mandir}/ca/man1/spectacle.1*
+%{_mandir}/de/man1/spectacle.1*
+%{_mandir}/es/man1/spectacle.1*
+%{_mandir}/it/man1/spectacle.1*
+%{_mandir}/man1/spectacle.1*
+%{_mandir}/nl/man1/spectacle.1*
+%{_mandir}/sv/man1/spectacle.1*
+%{_mandir}/uk/man1/spectacle.1*
