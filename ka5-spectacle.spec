@@ -1,16 +1,16 @@
-%define		kdeappsver	21.08.3
+%define		kdeappsver	21.12.0
 %define		qtver		5.9.0
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	c6da10190953ff8f0272d3abfc48c01b
+# Source0-md5:	981442eb407affd72070aea362dd2e70
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
@@ -87,6 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/knotifications5/spectacle.notifyrc
 %{_datadir}/metainfo/org.kde.spectacle.appdata.xml
 %attr(755,root,root) %{_libdir}/kconf_update_bin/spectacle-migrate-shortcuts
+%attr(755,root,root) %{_libdir}/kconf_update_bin/spectacle-migrate-rememberregion
+%{_datadir}/kconf_update/spectacle_rememberregion.upd
 %attr(755,root,root) %{_datadir}/kconf_update/50-clipboard_settings_change.py
 %{_datadir}/kconf_update/spectacle_clipboard.upd
 %{_datadir}/kconf_update/spectacle_shortcuts.upd
