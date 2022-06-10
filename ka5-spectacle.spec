@@ -43,6 +43,7 @@ BuildRequires:	kf5-kxmlgui-devel >= 5.29.0
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= 5.6.0
 BuildRequires:	shared-mime-info
+BuildRequires:	xcb-util-cursor-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
