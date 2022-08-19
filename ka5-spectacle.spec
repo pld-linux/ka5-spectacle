@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.04.3
+%define		kdeappsver	22.08.0
 %define		qtver		5.15.2
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	22.04.3
+Version:	22.08.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	08cbda71de0b978d75322325c76c8e46
+# Source0-md5:	f4ab646c0b2d95ab6be1db93d3dbe964
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
@@ -53,8 +53,8 @@ single window. The images can then be saved in a variety of formats.
 
 %description -l pl.UTF-8
 Spectacle to prosta aplikacja do robienia zrzutów ekranu. Potrafi
-przechwytywać obraz całego pulpitu lub tylko pojedynczego okna. Obrazy
-mogą być następnie zapisane w wielu formatach.
+przechwytywać obraz całego pulpitu lub tylko pojedynczego okna.
+Obrazy mogą być następnie zapisane w wielu formatach.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -89,11 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.spectacle.desktop
 %{_datadir}/dbus-1/interfaces/org.kde.Spectacle.xml
 %{_datadir}/dbus-1/services/org.kde.Spectacle.service
-%{_iconsdir}/hicolor/16x16/apps/spectacle.png
-%{_iconsdir}/hicolor/22x22/apps/spectacle.png
-%{_iconsdir}/hicolor/32x32/apps/spectacle.png
-%{_iconsdir}/hicolor/48x48/apps/spectacle.png
-%{_iconsdir}/hicolor/scalable/apps/spectacle.svgz
 %{_datadir}/knotifications5/spectacle.notifyrc
 %{_datadir}/metainfo/org.kde.spectacle.appdata.xml
 %attr(755,root,root) %{_libdir}/kconf_update_bin/spectacle-migrate-shortcuts
@@ -115,3 +110,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/nl/man1/spectacle.1*
 %{_mandir}/sv/man1/spectacle.1*
 %{_mandir}/uk/man1/spectacle.1*
+%{_iconsdir}/hicolor/scalable/apps/spectacle.svg
