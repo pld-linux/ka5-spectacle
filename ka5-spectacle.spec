@@ -9,7 +9,7 @@ Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
 Version:	22.08.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -26,6 +26,7 @@ BuildRequires:	Qt5Quick-devel
 BuildRequires:	Qt5Widgets-devel
 BuildRequires:	Qt5X11Extras-devel >= 5.6.0
 BuildRequires:	gettext-devel
+BuildRequires:	kColorPicker-devel
 BuildRequires:	kf5-extra-cmake-modules >= 5.53.0
 BuildRequires:	kf5-kconfig-devel >= 5.29.0
 BuildRequires:	kf5-kcoreaddons-devel >= 5.29.0
