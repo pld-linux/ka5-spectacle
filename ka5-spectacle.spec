@@ -9,7 +9,7 @@ Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
 Version:	22.12.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
