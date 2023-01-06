@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.0
+%define		kdeappsver	22.12.1
 %define		qtver		5.15.2
 %define		kaname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
-Version:	22.12.0
-Release:	3
+Version:	22.12.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d286bd549641c16f7c28fb93aaa1935b
+# Source0-md5:	1baa917b4a0fedfdcfd2928d466ea82c
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel
