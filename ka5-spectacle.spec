@@ -9,7 +9,7 @@ Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		ka5-%{kaname}
 Version:	23.04.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -41,6 +41,7 @@ BuildRequires:	kf5-kwayland-devel
 BuildRequires:	kf5-kwidgetsaddons-devel >= 5.29.0
 BuildRequires:	kf5-kwindowsystem-devel >= 5.29.0
 BuildRequires:	kf5-kxmlgui-devel >= 5.29.0
+BuildRequires:	kp5-kpipewire-devel
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= 5.6.0
 BuildRequires:	shared-mime-info
@@ -54,8 +55,8 @@ single window. The images can then be saved in a variety of formats.
 
 %description -l pl.UTF-8
 Spectacle to prosta aplikacja do robienia zrzutów ekranu. Potrafi
-przechwytywać obraz całego pulpitu lub tylko pojedynczego okna.
-Obrazy mogą być następnie zapisane w wielu formatach.
+przechwytywać obraz całego pulpitu lub tylko pojedynczego okna. Obrazy
+mogą być następnie zapisane w wielu formatach.
 
 %prep
 %setup -q -n %{kaname}-%{version}
